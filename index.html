@@ -9,14 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body>
+<body class="font-Montserrat">
     <nav></nav>
     <div id="tab_bar"></div>
     <section class="w-full h-1/2">
         <div id="home">
             <div class="w-full h-full flex flex-col absolute space-y-80 py-4 items-center outline-none">
-                <input class="border-none rounded-2xl w-3/4 p-3 shadow-sm" placeholder="San Francisco" type="search">
-                <button class="text-xl text-primary font-semibold p-4 bg-white w-32 h-14  border-none rounded-xl"> Explore</button>
+                <input class="border-none rounded-2xl w-3/4 p-3 shadow-sm transition-all duration-150 focus-within:w-11/12 focus:shadow-none focus:outline-none" placeholder="San Francisco" type="search">
+                <button class="text-lg text-primary font-semibold bg-white w-44 h-14  border-none rounded-2xl transition duration-100 hover:ease-in-out hover:bg-primary hover:text-white transform hover:translate-y-1 hover:scale-110"> Explore</button>
             </div>
             <div class="w-full h-3/4">
                 <div class="w-full h-full">
@@ -26,25 +26,84 @@
         </div>
         <div class="p-6" id="recomendados">
             <p class="text-3xl font-semibold text-primary">Recomendados</p>
-            <div class="w-auto h-72  flex space-x-6 items-center overflow-x-auto overscroll-x-contain mt-6">
+            <div class="w-auto h-72  flex space-x-6 items-center overflow-x-auto overscroll-x-contain mt-6 overflow-y-hidden">
                 <div class="plate">
-                    <div class="w-full h-3/5 bg-norway bg-cover rounded-t-lg"></div>
-                    <div class="flex flex-col bg-secondary w-full h-2/5 p-2 rounded-b-lg">
-                            <p class="text-xl text-white font-semibold font-Montserrat p-2">Noruega</p>
-                            <p class="px-2 text-sm font-Montserrat text-white ">Belleza sin igual</p>
+                    <div class="card--recomendation bg-norway"></div>
+                    <div class="green-card">
+                            <p>Noruega</p>
+                            <p>Belleza sin igual</p>
                     </div>
                 </div>
                 <div class="plate">
-                    <div class="w-full h-3/5 bg-norway bg-cover rounded-t-lg"></div>
-                    <div class="flex flex-col bg-secondary w-full h-2/5 p-2 rounded-b-lg">
-                            <p class="text-xl text-white font-semibold font-Montserrat p-2">Noruega</p>
-                            <p class="px-2 text-sm font-Montserrat text-white ">Belleza sin igual</p>
+                    <div class="card--recomendation bg-new_york"></div>
+                    <div class="white-card">
+                            <p>New York</p>
+                            <p>Jungla de concreto</p>
+                    </div>
+                </div>
+                <div class="plate">
+                    <div class="card--recomendation bg-yosemite"></div>
+                    <div class="green-card">
+                            <p>Yosemite</p>
+                            <p>Un respiro del mundo</p>
+                    </div>
+                </div>
+                <div class="plate">
+                    <div class="card--recomendation bg-seattle"></div>
+                    <div class="white-card">
+                        <p>Seatle</p>
+                        <p>Gran ciudad para los negocios</p>
+                    </div>
+                </div>
+                <div class="plate">
+                    <div class="card--recomendation bg-switzerland"></div>
+                    <div class="green-card">
+                            <p>Suiza</p>
+                            <p>La paz del mundo</p>
                     </div>
                 </div>
             </div>
-            
         </div>
-        <div id="rentas_destacadas"></div>
+        <div class="px-4 h-full w-full" id="rentas_destacadas">
+            <p class="text-3xl text-primary font-semibold pb-2 mt-2">Rentas destacadas</p>
+            <div class="card_container flex flex-col space-y-6 items-center justify-center pb-4">
+                <div class="w-full h-96 bg-chicago bg-cover rounded-3xl" id="a1">
+                    <p class="cardTitle">Chicago</p>
+                    <p class="text-white px-8 text-sm mr-16">2 habitaciones, baño y cocina</p>
+                </div>
+                <div class="w-full h-96 bg-LA bg-cover rounded-3xl" id="a2">
+                    <p class="cardTitle">Chicago</p>
+                    <p class="text-white px-8 text-sm mr-16">4 habitaciones, 3 baños, cocina integral y picina privada</p>
+                </div>
+                <div class="w-full h-96 bg-miami bg-cover rounded-3xl" id="a2">
+                    <p class="cardTitle">Miami</p>
+                    <p class="text-white px-8 text-sm mr-16">3 habitaciones, 2 baños, cocina integral y una increible vista al mar</p>
+                </div>
+                <div class="w-full h-96 bg-bali bg-cover rounded-3xl" id="a2">
+                    <p class="cardTitle">Bali</p>
+                    <p class="text-white px-8 text-sm mr-16">2 habitaciones, 2 baños, cocina integral y picina privada</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-full p-4 flex flex-col space-y-2" id="FAQs">
+            <p class="text-primary text-3xl font-semibold">FAQs</p>
+            <div class="w-full h-full pt-4">
+                <p class="text-primary text-xl font-semibold">Método de Pago</p>
+                <p class="pt-1 text-justify text-sm">Aceptamos VISA, MasterCard, American Express, Paypal y Binance</p>
+            </div>
+            <div class="w-full h-full pt-4">
+                <p class="text-primary text-xl font-semibold">Politica de cancelación</p>
+                <p class="pt-1 text-justify text-sm">Las políticas de cancelación para estadías largas pueden diferir de las estadías cortas. Generalmente, las políticas son más estrictas debido a la duración de la reserva. Asegúrate de leer y comprender las condiciones antes de hacer la reserva. <a href="#" class="text-terciary">Revise aqui su fecha de cancelacion</a></p>
+            </div>
+            <div class="w-full h-full pt-4">
+                <p class="text-primary text-xl font-semibold">Estadias largas</p>
+                <p class="pt-1 text-justify text-sm">Al reservar una estancia larga, podrás disfrutar de tarifas con descuento, mayor flexibilidad en las condiciones de reserva, y en algunos casos, servicios adicionales como limpieza semanal, acceso a instalaciones especiales y más</p>
+            </div>
+            <div class="w-full h-full pt-4">
+                <p class="text-primary text-xl font-semibold">Extension de la estadia</p>
+                <p class="pt-1 text-justify text-sm">Si necesitas extender tu estadía, puedes hacerlo sujeto a la disponibilidad de la propiedad. Es recomendable comunicarte con el anfitrión o el servicio de atención al cliente lo antes posible para asegurar la extensión.</p>
+            </div>
+        </div>
     </section>
 
     <footer>

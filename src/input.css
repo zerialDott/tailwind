@@ -3,5 +3,29 @@
 @tailwind utilities;
 
 .plate{
-    @apply w-48 h-64 shadow-md rounded-lg flex-none
+    @apply w-48 h-64 shadow-md rounded-lg flex-none transform transition-all hover:-translate-y-4 hover:shadow-xl;
+}
+.card--recomendation{
+    @apply w-full h-3/5 bg-cover rounded-t-lg;
+}
+.green-card{
+    @apply flex flex-col bg-secondary w-full h-2/5 p-2 rounded-b-lg;
+}
+.green-card p:first-child{
+    @apply text-xl text-white font-semibold font-Montserrat p-2;
+}
+.green-card p:nth-child(2){
+    @apply px-2 text-sm font-Montserrat text-white ;
+}
+.white-card{
+    @apply flex flex-col bg-white w-full h-2/5 p-2 rounded-b-lg
+}
+.white-card p:first-child{
+    @apply text-xl text-terciary font-semibold font-Montserrat p-2
+}
+.white-card p:nth-child(2){
+    @apply px-2 text-sm font-Montserrat text-terciary;
+}
+.cardTitle{
+    @apply text-3xl font-bold text-white px-8 pt-8 pb-2
 }

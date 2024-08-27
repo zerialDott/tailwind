@@ -37,6 +37,9 @@ module.exports = {
         Montserrat:['Montserrat','sans-serif']
       }
     },
+    variants: {
+      width: ["responsive","hover","focus"],
+    },
     corePlugins: {
       aspectRatio: false,
     },
