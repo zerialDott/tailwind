@@ -29,3 +29,13 @@
 .cardTitle{
     @apply text-3xl font-bold text-white px-8 pt-8 pb-2
 }
+.item {
+    @apply shadow-md rounded-lg flex-none transform transition-all duration-200 ease-in-out hover:-translate-y-4 hover:shadow-xl cursor-pointer;
+    position: relative; 
+    z-index: 1; 
+}
+
+.item:hover {
+    z-index: 10; 
+}
+

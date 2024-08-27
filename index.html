@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +9,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-<body class="font-Montserrat">
+<body class="font-Montserrat ">
     <nav></nav>
-    <div id="tab_bar"></div>
-    <section class="w-full h-1/2">
-        <div id="home">
-            <div class="w-full h-full flex flex-col absolute space-y-80 py-4 items-center outline-none">
-                <input class="border-none rounded-2xl w-3/4 p-3 shadow-sm transition-all duration-150 focus-within:w-11/12 focus:shadow-none focus:outline-none" placeholder="San Francisco" type="search">
-                <button class="text-lg text-primary font-semibold bg-white w-44 h-14  border-none rounded-2xl transition duration-100 hover:ease-in-out hover:bg-primary hover:text-white transform hover:translate-y-1 hover:scale-110"> Explore</button>
+
+    <section class="w-full h-auto">
+        <div class="relative" id="home">
+            <div class="w-full h-full flex flex-col absolute  py-4 items-center outline-none lg:space-y-0 lg:items-start lg:justify-center lg:pl-16">
+                <div class="hidden h-auto lg:w-2/5 lg:flex -mt-16 pb-6">
+                    <p class="text-4xl font-bold">Explora más lugares como este</p>
+                </div>
+                <input class="border-none rounded-2xl w-3/4 p-3 shadow-sm transition-all duration-150 focus-within:w-11/12 focus:shadow-none focus:outline-none lg:hidden" placeholder="San Francisco" type="search" id="search">
+                <button class="text-lg text-primary font-semibold bg-white mt-80 w-44 h-14  border-none rounded-2xl transition duration-100 hover:ease-in-out hover:bg-primary hover:text-white transform hover:translate-y-1 hover:scale-110"> Explore</button>
             </div>
             <div class="w-full h-3/4">
-                <div class="w-full h-full">
-                    <img src="./public/img/sanFrancisco.jpg" alt="" srcset="">
+                <div class="w-full h-full lg:h-96 lg:bg-sanFranciscoDesktop lg:bg-cover lg:bg-center">
+                    <img class="lg:hidden" src="./public/img/sanFrancisco.jpg" alt="" srcset="">
                 </div>
             </div>
         </div>
-        <div class="p-6" id="recomendados">
+        <div class="p-4" id="recomendados">
             <p class="text-3xl font-semibold text-primary">Recomendados</p>
             <div class="w-auto h-72  flex space-x-6 items-center overflow-x-auto overscroll-x-contain mt-6 overflow-y-hidden">
                 <div class="plate">
@@ -64,28 +67,29 @@
                 </div>
             </div>
         </div>
-        <div class="px-4 h-full w-full" id="rentas_destacadas">
-            <p class="text-3xl text-primary font-semibold pb-2 mt-2">Rentas destacadas</p>
-            <div class="card_container flex flex-col space-y-6 items-center justify-center pb-4">
-                <div class="w-full h-96 bg-chicago bg-cover rounded-3xl" id="a1">
-                    <p class="cardTitle">Chicago</p>
-                    <p class="text-white px-8 text-sm mr-16">2 habitaciones, baño y cocina</p>
-                </div>
-                <div class="w-full h-96 bg-LA bg-cover rounded-3xl" id="a2">
-                    <p class="cardTitle">Chicago</p>
-                    <p class="text-white px-8 text-sm mr-16">4 habitaciones, 3 baños, cocina integral y picina privada</p>
-                </div>
-                <div class="w-full h-96 bg-miami bg-cover rounded-3xl" id="a2">
-                    <p class="cardTitle">Miami</p>
-                    <p class="text-white px-8 text-sm mr-16">3 habitaciones, 2 baños, cocina integral y una increible vista al mar</p>
-                </div>
-                <div class="w-full h-96 bg-bali bg-cover rounded-3xl" id="a2">
-                    <p class="cardTitle">Bali</p>
-                    <p class="text-white px-8 text-sm mr-16">2 habitaciones, 2 baños, cocina integral y picina privada</p>
+            <div class="px-4 h-full w-full flex items-center justify-center flex-col" id="rentas_destacadas">
+                <p class="text-3xl text-primary font-semibold  px-1 w-full pb-4">Rentas destacadas</p>
+                <div class="card_container pb-4 grid h-full w-full grid-cols-1 gap-8 sm:h-3/4 sm:w-full sm:max-w-full sm:grid-cols-3 sm:grid-rows-2 sm:gap-6">
+                    
+                    <div class="item col-span-1 w-full h-96 bg-chicago bg-cover rounded-3xl bg-center sm:col-span-2 item" id="a1">
+                        <p class="cardTitle">Chicago</p>
+                        <p class="text-white px-8 text-sm mr-16">2 habitaciones, baño y cocina</p>
+                    </div>
+                    <div class="item row-span-1 w-full h-96 bg-LA bg-cover rounded-3xl sm:col-span-1 " id="a2">
+                        <p class="cardTitle">Los Angeles</p>
+                        <p class="text-white px-8 text-sm mr-16">4 habitaciones, 3 baños, cocina integral y picina privada</p>
+                    </div>
+                    <div class="item col-span-1 w-full h-96 bg-miami bg-cover rounded-3xl sm:col-span-1" id="a2">
+                        <p class="cardTitle">Miami</p>
+                        <p class="text-white px-8 text-sm mr-16">3 habitaciones, 2 baños, cocina integral y una increible vista al mar</p>
+                    </div>
+                    <div class="item col-span-1 w-full h-96 bg-bali bg-cover rounded-3xl sm:col-span-2" id="a2">
+                        <p class="cardTitle">Bali</p>
+                        <p class="text-white px-8 text-sm mr-16">2 habitaciones, 2 baños, cocina integral y picina privada</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="w-full h-full p-4 flex flex-col space-y-2" id="FAQs">
+        <div class="w-full h-full p-6 flex flex-col" id="FAQs">
             <p class="text-primary text-3xl font-semibold">FAQs</p>
             <div class="w-full h-full pt-4">
                 <p class="text-primary text-xl font-semibold">Método de Pago</p>
@@ -106,8 +110,27 @@
         </div>
     </section>
 
-    <footer>
-
+    <footer class="w-full h-auto px-6 pt-2 pb-12 bg-zinc-50 text-gray-300">
+        <p class="text-md">Acerca de nosotros</p>
+        <p class="text-sm pt-2">Inversionistas</p>
+        <p class="text-sm pt-2">Trabajos</p>
+        <p class="text-sm pt-2">Politica de privacidad</p>
+        <p class="text-sm pt-2">Travel inc</p>
+        <p class="text-sm pt-2">Siguenos</p>
     </footer>
+    <div class="w-full h-16 bg-white flex justify-around px-8 fixed left-0 bottom-0 shadow-md rounded-t-xl items-center lg:hidden" id="tab_bar">
+        <a href="#home">
+            <img src="./public/svg/home.svg" alt="" srcset="">
+        </a>
+        <a href="#rentas_destacadas">
+            <img src="./public/svg/search.svg" alt="" srcset="">
+        </a>
+        <a href="">
+            <img src="./public/svg/heart.svg" alt="" srcset="">
+        </a>
+        <a href="">
+            <img src="./public/svg/user.svg" alt="" srcset="">
+        </a>
+    </div>
 </body>
 </html>
